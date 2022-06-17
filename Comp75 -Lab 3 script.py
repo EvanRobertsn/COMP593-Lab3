@@ -1,4 +1,4 @@
-#Comp75 -Lab 3 script
+#Comp75 -Lab 3 script By EVAN ROBERTSON for Professor Jeremy Dalby
 #lists movie genres in data structure
 def list_genre(movies):
     list=[]
