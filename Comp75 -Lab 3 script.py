@@ -1,10 +1,26 @@
 #Comp75 -Lab 3 script
 
-def list_movies():
-    pass
 
-def list_genre():
-    pass
+def list_genre(movies):
+    list=[]
+    for genre in movies['movies']:
+        list.append(genre['genre'])
+    print(len(list))
+    for i in range(len(list)):
+        if(i==0):
+            print("Some of my Fav movies Genres are:",end=" ")
+        
+        if(i<len(list)-1):
+            
+            print(list[i]+',',end=" ")
+        else:
+            print("and",list[i]+".")
+
+def list_title(titles):
+    list=[]
+    for title in titles['movies']:
+        list.append(title['title'])
+    print(list)
 
 def list_toppings():
     pass
@@ -51,8 +67,13 @@ def main():
     'genre': "Animated Comedy"
     }
     hackers_dream['movies'].append(new_movie)
-    stud_name_id(hackers_dream['full_name'],hackers_dream["student_id"])
     
+    #function Calls
+
+
+    stud_name_id(hackers_dream['full_name'],hackers_dream["student_id"])
+    list_genre(hackers_dream)
+    list_title(hackers_dream)
 
 main()
 
