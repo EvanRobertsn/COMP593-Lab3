@@ -47,7 +47,7 @@ def add_piz_top(pizza, top_tup):
         pizza['pizza_toppings'][i]=pizza['pizza_toppings'][i].lower()
     return pizza
 
-#create empty main function w/ pass call
+
 def main():
 
     #create dictonary w/ information
