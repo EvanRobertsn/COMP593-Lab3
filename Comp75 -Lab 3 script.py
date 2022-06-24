@@ -26,9 +26,9 @@ def list_title(titles):
         
         if(i<len(list)-1):
             
-            print(list[i]+',',end=" ")
+            print(list[i].title()+',',end=" ")
         else:
-            print("and",list[i]+".")
+            print("and",list[i].title()+".")
 #lists the toppings on my pizza
 def list_toppings(toppings):
     print("My favourite Pizza Toppings are:")
@@ -61,12 +61,12 @@ def main():
         "movies":[
             #create Nested Dictonaries
             {
-                "title": "The ShawShank Redemption",
+                "title": "the shawshank redemption",
 
                 "genre": "Drama"
             },
             {
-                "title": "The Usual Suspects",
+                "title": "the usual suspects",
                 "genre": "Action Drama"
             }
         ]
@@ -75,26 +75,28 @@ def main():
 
     #add new movie to movie dictonary
     new_movie={
-    "title": "Megamind",
+    "title": "megamind",
 
     'genre': "Animated Comedy"
     }
     #add new movie to the dictonary
     hackers_dream['movies'].append(new_movie)
+    
     pizza_top_tuple=("Raw Chicken","The biG toe fRom the right foot of your firstborn","Olives")
     
     #function Calls within main
     stud_name_id(hackers_dream)
     
-    list_genre(hackers_dream)
-
-    list_title(hackers_dream['movies'])
+    
 
     list_toppings(hackers_dream)
     #add pizza toppings to data structure
     hackers_dream=add_piz_top(hackers_dream,pizza_top_tuple)
 
     list_toppings(hackers_dream)
+    list_genre(hackers_dream)
+
+    list_title(hackers_dream['movies'])
 
 main()
 
